@@ -8,13 +8,13 @@ cask "sextant" do
   homepage "https://github.com/shrik450/sextant"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Sextant.app"
   binary "#{appdir}/Sextant.app/Contents/Helpers/sextant"
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Sextant.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Sextant.app"]
   end
 
   uninstall quit: "com.shrikanthup.Sextant"
