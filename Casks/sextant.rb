@@ -1,6 +1,6 @@
 cask "sextant" do
-  version "0.2.0"
-  sha256 "bfcabf190e38479f00fa7944f9a0b184ad017c497b09068bedcd309b4e5da59a"
+  version "0.2.2"
+  sha256 "748f1fd4476073c2e57878aee5256634c4daa29d39b29381bdf7b0393e5c8b35"
 
   url "https://github.com/shrik450/sextant/releases/download/v#{version}/Sextant-#{version}.zip"
   name "Sextant"
